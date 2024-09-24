@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculateur de Fertilité - Calendrier des Cycles Féminins</title>
-
     <!-- SEO Meta Tags -->
     <meta name="description" content="Calculateur de fertilité basé sur le cycle menstruel. Déterminez les jours fertiles et non fertiles grâce à ce calendrier interactif.">
     <meta name="keywords" content="calculateur fertilité, calendrier ovulation, cycle menstruel, jours fertiles, ovulation, santé féminine, suivi cycle">
     <meta name="robots" content="index, follow">
     <meta name="author" content="M. François GIORGI">
     <link rel="canonical" href="https://www.exemple.com/calculateur-fertilite">
-
-    <!-- Open Graph Meta Tags (Pour le partage sur les réseaux sociaux) -->
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Calculateur de Fertilité - Calendrier des Cycles Féminins">
     <meta property="og:description" content="Utilisez ce calculateur de fertilité pour suivre votre cycle menstruel et connaître vos jours fertiles.">
     <meta property="og:type" content="website">
@@ -20,130 +18,33 @@
     <meta property="og:image" content="https://www.exemple.com/images/og-image.jpg">
     <meta property="og:site_name" content="Calculateur de Fertilité">
     <meta property="og:locale" content="fr_FR">
-
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Calculateur de Fertilité - Calendrier des Cycles Féminins">
     <meta name="twitter:description" content="Suivez votre cycle menstruel et déterminez vos jours fertiles avec ce calendrier interactif.">
     <meta name="twitter:image" content="https://www.exemple.com/images/twitter-image.jpg">
-
     <!-- Favicon -->
     <link rel="icon" href="https://www.exemple.com/favicon.ico" type="image/x-icon">
-
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        .calendar-container {
-            width: 400px;
-            background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-        .calendar-header {
-            background-color: #1CA5DD;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-size: 24px;
-        }
-        .calendar {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            grid-gap: 2px;
-            padding: 10px;
-        }
-        .day {
-            width: 100%;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            position: relative;
-            border: 1px solid #ddd;
-        }
-        .day.selected {
-            background-color: #1CA5DD; /* Jour sélectionné */
-            color: #ffffff;
-        }
-        .day.non-fertile {
-            background-color: #e3f2fd; /* Couleur pour jours non fertiles */
-        }
-        .day.fertile {
-            background-color: #ffeb3b; /* Couleur pour jours fertiles */
-        }
-        .day.ovulation {
-            background-color: #ff5722; /* Couleur pour le jour d'ovulation */
-        }
-        .controls {
-            display: flex;
-            justify-content: space-between;
-            width: 400px;
-            margin-bottom: 20px;
-        }
-        .controls label {
-            margin-right: 10px;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #1CA5DD;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #139ac0;
-        }
-        .legend {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width: 400px;
-            background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            padding: 15px;
-            margin-top: 20px;
-        }
-        .legend-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        .legend-icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-        }
-        .legend-text {
-            font-size: 14px;
-        }
-        .logo {
-            width: 25px;
-            height: 25px;
-            position: absolute;
-            top: 2px;
-            right: 2px;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
-        <h1>Calculateur de Fertilité</h1>
-        <p>Déterminez vos jours fertiles en fonction de votre cycle menstruel.</p>
+        <p>pub</p>
+        
+        <!-- Annonce Google dans l'en-tête -->
+        <div class="ad-container">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-7270779498695617"
+                 data-ad-slot="4923216359"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
     </header>
+
     <div class="controls">
         <div>
             <label for="cycle-length">Durée du cycle (jours) :</label>
@@ -182,6 +83,20 @@
         </div>
         <button id="calculate-btn">Calculer</button>
     </div>
+    
+    <!-- Annonce Google après les contrôles -->
+    <div class="ad-container">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7270779498695617"
+             data-ad-slot="4923216359"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
     <div class="calendar-container">
         <div class="calendar-header">
             Calendrier de Fertilité
@@ -204,84 +119,38 @@
             <div class="legend-icon" style="background-color: #ff5722;"></div>
             <div class="legend-text">Jour d'ovulation</div>
         </div>
-     
+    </div>
+
+    <!-- Annonce Google avant le pied de page -->
+    <div class="ad-container">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7270779498695617"
+             data-ad-slot="4923216359"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
 
     <footer>
         <p>&copy; 2024 Calculateur de Fertilité. Tous droits réservés.</p>
     </footer>
-<script>
-    let selectedDay = 1; // Par défaut, le premier jour est sélectionné
+    
+    <!-- Scripts -->
+    <script src="./script.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7270779498695617"
+    crossorigin="anonymous"></script></body>
+</html>
 
-    function generateCalendar(cycleLength = 28) {
-        const calendarElement = document.getElementById('calendar');
-        calendarElement.innerHTML = ''; // Réinitialiser le calendrier
-    
-        for (let i = 1; i <= cycleLength; i++) {
-            const dayElement = document.createElement('div');
-            dayElement.classList.add('day');
-            dayElement.textContent = i;
-    
-            if (i === selectedDay) {
-                dayElement.classList.add('selected');
-            }
-    
-            dayElement.addEventListener('click', () => {
-                selectedDay = i;
-                updateSelectedDay(); // Met à jour le jour sélectionné
-            });
-    
-            calendarElement.appendChild(dayElement);
-        }
-    }
-    
-    function updateSelectedDay() {
-        const days = document.querySelectorAll('.day');
-        days.forEach(day => {
-            day.classList.remove('selected');
-        });
-    
-        const selectedDayElement = days[selectedDay - 1];
-        selectedDayElement.classList.add('selected');
-    }
-    
-    function calculateFertileDays(cycleLength) {
-        const days = document.querySelectorAll('.day');
-        days.forEach(day => {
-            day.classList.remove('fertile', 'ovulation', 'non-fertile');
-            day.querySelector('.logo')?.remove(); // Retirer les logos des jours avant de recalculer
-        });
-    
-        const ovulationDay = (selectedDay + cycleLength - 14) % cycleLength || cycleLength; // Jour d'ovulation supposé
-        const fertileDaysStart = ovulationDay - 6; // Début de la période fertile
-        const fertileDaysEnd = ovulationDay + 1; // Fin de la période fertile
-    
-        days.forEach((day, index) => {
-            const dayNumber = index + 1;
-            if (dayNumber === ovulationDay) {
-                day.classList.add('ovulation');
-            } else if (dayNumber >= fertileDaysStart && dayNumber <= fertileDaysEnd) {
-                day.classList.add('fertile');
-            } else {
-                day.classList.add('non-fertile');
-            }
-    
-            // Ajouter les logos sur les jours spécifiés après le calcul
-            const logoElement = document.createElement('img');
-            logoElement.src = 'logo.png'; // Remplacez par le chemin de votre logo
-            logoElement.classList.add('logo');
-    
-            if (dayNumber === selectedDay) {
-                day.appendChild(logoElement);
-            }
-        });
-    }
-    
-    document.getElementById('calculate-btn').addEventListener('click', () => {
-        const cycleLength = parseInt(document.getElementById('cycle-length').value, 10);
-        calculateFertileDays(cycleLength);
-    });
-    
-    // Initialisation du calendrier avec la longueur de cycle par défaut
-    generateCalendar();
-    </script>
+
+
+
+
+
+
+
+
+
+
