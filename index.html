@@ -1,31 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quand faire l'amour à votre femme sans moyen de contraception - Calculateur de Périodes Sans Risque</title>
+    <title>Quand faire l'amour à votre partenaire sans moyen de contraception - Calculateur de Périodes Sans Risque</title>
+    
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Calculateur pour déterminer les périodes où il est sans risque pour les hommes d'avoir des rapports sans contraception.">
-    <meta name="keywords" content="calculateur, périodes sans risque, contraception, rapport sécurisé, suivi cycle">
+    <meta name="description" content="Calculateur pour déterminer les périodes où il est sans risque pour les hommes d'avoir des rapports sans contraception. Évitez les grossesses non désirées.">
+    <meta name="keywords" content="calculateur, périodes sans risque, contraception, rapport sécurisé, suivi cycle, santé reproductive, fertilité">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Natam">
     <link rel="canonical" href="https://www.exemple.com/quand-faire-l-amour-sans-contraception">
     <link rel="stylesheet" href="./style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Quand faire l'amour à votre partenaire sans moyen de contraception">
+    <meta property="og:description" content="Déterminez les périodes propices pour des rapports sans risque de grossesse grâce à notre calculateur.">
+    <meta property="og:image" content="https://www.exemple.com/img/image-promo.jpg"> <!-- Ajoutez une image pertinente -->
+    <meta property="og:url" content="https://evitergrossesse.netlify.app/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Quand faire l'amour à votre partenaire sans moyen de contraception">
+    <meta name="twitter:description" content="Déterminez les périodes propices pour des rapports sans risque de grossesse grâce à notre calculateur.">
+    <meta name="twitter:image" content="https://www.exemple.com/img/image-promo.jpg"> <!-- Ajoutez une image pertinente -->
+
+    <!-- Author and Copyright -->
+    <meta name="copyright" content="Natam">
+    <meta name="language" content="fr">
 </head>
 
 <body>
     <header class="header">
-        <h1 style="font-size: 28px; font-weight: bold;">Quand faire l'amour à votre femme sans moyen de contraception</h1>
+        <h1 style="font-size: 28px; font-weight: bold;">Quand faire l'amour à votre partenaire sans moyen de contraception</h1>
     </header>
-    <div style="text-align: center; padding: 20px;">
+    <div style="text-align: center; padding: 20px; max-width:1000px">
         <p style="margin: 0 auto;" class="text-p">
-            Conçu spécialement pour vous aider à déterminer les périodes où vous pouvez avoir des rapports sans risque de grossesse, sans utiliser de contraception. Suivez simplement les étapes pour connaître les jours où vous pouvez être tranquille.
+            Conçu spécialement pour vous aider à déterminer les périodes où vous pouvez avoir des rapports sans risque de grossesse, sans utiliser de contraception. Suivez simplement les étapes pour connaître les jours propices. <br>
+            Le cycle se calcule entre les deux dernières règles, demandez à votre partenaire quand elle a eu ses dernières règles. <br>
+            Le nombre de jours entre ces deux dates correspond à la durée de son cycle.
         </p>
     </div>
     <div class="controls">
         <div class="bloc-cycle">
-            <p class="text-p"> Le cycle se calcule entre les deux dernières règles. Demande à ta femme quand elle a eu ses dernières règles. Le nombre de jours entre ces deux dates correspond à la durée de son cycle. </p>
-            <label class="text-p" for="cycle-length">Choisis cette durée moyenne ici :</label>
+            <label class="text-p" for="cycle-length">Choisissez cette durée moyenne ici :</label>
             <select id="cycle-length">
                 <option value="14">14</option>
                 <option value="15">15</option>
@@ -62,45 +85,49 @@
 
     <div class="calendar-container">
         <div class="calendar-header">
-            Quel a été le premier jour des dernières règles de votre compagne ?
+            Quel a été le premier jour des dernières règles de votre partenaire ?
         </div>
-        
-        <!-- Carousel pour les mois -->
-<div class="date-selector">
-    <button id="prev-month" class="carousel-button"></button>
-    <span id="month-label">Janvier 2024</span>
-    <button id="next-month" class="carousel-button"></button>
-</div>
 
-        
-        
+        <!-- Carousel pour les mois -->
+        <div class="date-selector">
+            <button id="prev-month" class="carousel-button"></button>
+            <span id="month-label">Janvier 2024</span>
+            <button id="next-month" class="carousel-button"></button>
+        </div>
 
         <div class="calendar" id="calendar">
             <!-- Les jours du calendrier seront générés ici -->
         </div>
-        
     </div>
+
     <button id="calculate-button" class="btn-calculer">Calculer</button>
     <div class="legend">
         <div class="legend-item">
-            <img src="./img/aubergine.jpg" alt="Périodes tranquilles" class="legend-icon" />
-            <div class="legend-text"><p class="text-p">Périodes tranquilles</p></div>
+            <img src="./img/aubergine.jpg" alt="Périodes propices" class="legend-icon" />
+            <div class="legend-text">
+                <p class="text-p">Périodes propices</p>
+            </div>
         </div>
         <div class="legend-item">
-            <img src="./img/no-aubergine.webp" alt="Périodes risquées" class="legend-icon" />
-            <div class="legend-text"><p class="text-p">Périodes risquées</p></div>
+            <img src="./img/no-aubergine.png" alt="Périodes risquées" class="legend-icon" />
+            <div class="legend-text">
+                <p class="text-p">Périodes risquées</p>
+            </div>
         </div>
         <div class="legend-item">
-            <img src="./img/no-aubergine.webp" alt="Période d'ovulation (très risqué)" class="legend-icon" />
-            <div class="legend-text"><p class="text-p">Période d'ovulation (très risqué)</p></div>
+            <img src="./img/no-aubergine.png" alt="Période d'ovulation (très risqué)" class="legend-icon" />
+            <div class="legend-text">
+                <p class="text-p">Période d'ovulation (très risqué)</p>
+            </div>
         </div>
     </div>
-    
+
     <footer>
         <p>&copy; 2024 Natam. Tous droits réservés.</p>
     </footer>
-    
+
     <!-- Scripts -->
     <script src="./script.js"></script>
 </body>
+
 </html>

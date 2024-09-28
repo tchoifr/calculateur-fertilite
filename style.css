@@ -148,14 +148,14 @@ background-color: #003d59;      }
 }
 
 .fertile {
-    background-image: url('./img/no-aubergine.webp'); /* Image pour les périodes fertiles */
+    background-image: url('./img/no-aubergine.png'); /* Image pour les périodes fertiles */
     background-size: cover;
     background-position: center;
     color: white;
 }
 
 .ovulation {
-    background-image: url('./img/no-aubergine.webp'); /* Image pour la période d'ovulation */
+    background-image: url('./img/no-aubergine.png'); /* Image pour la période d'ovulation */
     background-size: cover;
     background-position: center;
     color: white;
