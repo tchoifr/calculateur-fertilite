@@ -1,14 +1,116 @@
-
 body {
     font-family: 'Arial', sans-serif;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: white;
 }
+
+/* Style de la scrollbar du body */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #cfcfcf;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #003d59;
+    box-shadow: black;
+}
+
+
+
+.header{
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+    width: 100%;
+    background-color: #003d59;
+    color: white;
+}
+.text-p{
+    font-size: 18px; color: #555; line-height: 1.5;
+}
+.btn-calculer {
+        padding: 10px 40px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border: 0;
+        background: transparent;
+        position: relative;
+        transition: all 0.2s;
+        overflow: hidden;
+        color: #fff;
+        border-radius: 30px;
+background-color: #003d59;      }
+      
+      .btn-calculer::after {
+        content: '';
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        top: -50px;
+        left: -100px;
+        background-image: linear-gradient(225deg, #27d86c 0%, #26caf8 50%, #c625d0 100%);
+        z-index: -1;
+        transition: all 0.5s;
+      }
+      
+      .btn-calculer:hover::after {
+        transform: rotate(150deg);
+      }
+      
+      .btn-calculer:hover {
+        transform: translate(0, -6px);
+        box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, 0.25), -10px 10px 25px 0px rgba(39, 200, 255, 0.25);
+      }
+      
+      #cycle-length {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 65px;
+        padding: 10px 15px;
+        font-size: 16px;
+        border: 1px solid #1CA5DD;
+        border-radius: 5px;
+        background-color: #ffffff;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="%231CA5DD" d="M6 9l-4-4h8z"/></svg>');
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        transition: border-color 0.3s;
+        overflow: hidden;
+        margin: 20px;
+    }
+    
+    #cycle-length::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    #cycle-length::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    
+    #cycle-length::-webkit-scrollbar-thumb {
+        background: rgba(143, 64, 248, 0.5);
+        border-radius: 10px;
+    }
+    
+    #cycle-length::-webkit-scrollbar-thumb:hover {
+        background: #003d59;
+    }
+    
+    #cycle-length:focus {
+        outline: none;
+        border-color: #003d59;
+    }
+    
+    #cycle-length:hover {
+        border-color: #003d59;
+    }
+    
 .calendar-container {
     width: 400px;
     background-color: #ffffff;
@@ -17,93 +119,114 @@ body {
     overflow: hidden;
     margin-bottom: 20px;
     min-height: 340px;
-
 }
+
 .calendar-header {
-    background-color: #1CA5DD;
+    background-color: #003d59;
     color: white;
     text-align: center;
     padding: 15px;
     font-size: 24px;
 }
+
 .calendar {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-gap: 2px;
-    padding: 10px;
-}
-.day {
-    width: 100%;
-    height: 60px;
     display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
     justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
-    border: 1px solid #ddd;
+    padding: 5px;
 }
-.day.selected {
-    background-color: #1CA5DD; /* Jour sélectionné */
-    color: #ffffff;
-}
-.day.non-fertile {
-    background-color: #e3f2fd; /* Couleur pour jours non fertiles */
-}
-.day.fertile {
-    background-color: #ffeb3b; /* Couleur pour jours fertiles */
-}
-.day.ovulation {
-    background-color: #ff5722; /* Couleur pour le jour d'ovulation */
-}
-.controls {
+
+.day {
+    width: calc(100% / 7); /* 7 jours par semaine */
+    height: 60px; /* Ajustez la hauteur selon vos besoins */
     display: flex;
-    justify-content: space-between;
-    width: 400px;
-    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc; /* Pour visualiser les jours */
+    position: relative; /* Nécessaire pour l'image */
 }
-.controls label {
-    margin-right: 10px;
-}
-button {
-    padding: 10px 20px;
-    background-color: #1CA5DD;
+
+.fertile {
+    background-image: url('./img/no-aubergine.webp'); /* Image pour les périodes fertiles */
+    background-size: cover;
+    background-position: center;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
-button:hover {
-    background-color: #139ac0;
+
+.ovulation {
+    background-image: url('./img/no-aubergine.webp'); /* Image pour la période d'ovulation */
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.non-fertile {
+    background-image: url('./img/aubergine.jpg'); /* Image pour les périodes non fertiles */
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.selected {
+    border: 2px solid #ff0000; /* Une bordure pour le jour sélectionné */
+}
+
+
+.controls {
+    text-align: center;
+}
+.bloc-cycle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 .legend {
     display: flex;
     justify-content: center;
+    margin: 20px 0;
+}
+
+.legend-item {
+    display: flex;
     align-items: center;
-    flex-direction: column;
-    width: 400px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 15px;
-    margin-top: 20px;
+    margin: 0 10px;
+}
+
+.legend-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    background-color: #003d59;
+    width: 100%;
+    bottom: 0;
+    color: white;
 }
 .legend-item {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin: 0 10px;
 }
+
 .legend-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+    width: 30px; /* Ajustez la taille de l'image */
+    height: 30px;
+    margin-right: 5px;
 }
-.legend-text {
-    font-size: 14px;
-}
-.logo {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 2px;
-    right: 2px;
+
+@media (max-width: 380px) {
+    .legend {
+        flex-direction: column;
+    }
+
+    .calendar-container {
+        width: 300px;
+    }
 }

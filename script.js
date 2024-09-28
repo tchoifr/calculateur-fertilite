@@ -36,7 +36,6 @@ function calculateFertileDays(cycleLength) {
   const days = document.querySelectorAll(".day");
   days.forEach((day) => {
     day.classList.remove("fertile", "ovulation", "non-fertile");
-    day.querySelector(".logo")?.remove(); // Retirer les logos des jours avant de recalculer
   });
 
   const ovulationDay =
@@ -52,15 +51,6 @@ function calculateFertileDays(cycleLength) {
       day.classList.add("fertile");
     } else {
       day.classList.add("non-fertile");
-    }
-
-    // Ajouter les logos sur les jours spécifiés après le calcul
-    const logoElement = document.createElement("img");
-    logoElement.src = "logo.png"; // Remplacez par le chemin de votre logo
-    logoElement.classList.add("logo");
-
-    if (dayNumber === selectedDay) {
-      day.appendChild(logoElement);
     }
   });
 }
