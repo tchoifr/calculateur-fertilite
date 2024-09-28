@@ -230,3 +230,37 @@ footer {
         width: 300px;
     }
 }
+
+
+
+
+.date-selector {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Centrer verticalement les éléments */
+    padding: 10px;
+}
+
+.carousel-button {
+    width: 40px; /* Largeur du bouton */
+    height: 40px; /* Hauteur du bouton */
+    background: none; /* Pas de fond */
+    border: none; /* Pas de bordure */
+    cursor: pointer; /* Curseur pointer pour indiquer qu'il est cliquable */
+    background-size: contain; /* Ajuste l'image pour qu'elle soit contenue */
+    background-repeat: no-repeat; /* Pas de répétition de l'image */
+}
+
+#prev-month {
+    background-image: url('/img/arrow-left.png'); /* Image pour le bouton précédent */
+}
+
+#next-month {
+    background-image: url('/img/arrow-right.png'); /* Image pour le bouton suivant */
+}
+
+#month-label {
+    font-size: 16px; /* Taille de la police pour le label du mois */
+    font-weight: bold; /* Mettre en gras */
+    color: #1CA5DD; /* Couleur du texte */
+}

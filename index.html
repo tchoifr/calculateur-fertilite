@@ -1,53 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Quand faire l'amour à votre femme sans moyen de contraception - Calculateur de Périodes Sans Risque</title>
-        <!-- SEO Meta Tags -->
-        <meta name="description" content="Calculateur pour déterminer les périodes où il est sans risque pour les hommes d'avoir des rapports sans contraception.">
-        <meta name="keywords" content="calculateur, périodes sans risque, contraception, rapport sécurisé, suivi cycle">
-        <meta name="robots" content="index, follow">
-        <meta name="author" content="Natam">
-        <link rel="canonical" href="https://www.exemple.com/quand-faire-l-amour-sans-contraception">
-        <!-- Open Graph Meta Tags -->
-        <meta property="og:title" content="Quand faire l'amour à votre femme sans moyen de contraception - Calculateur de Périodes Sans Risque">
-        <meta property="og:description" content="Utilisez ce calculateur pour déterminer les périodes où il est sans risque pour les hommes d'avoir des rapports sans contraception.">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://www.exemple.com/quand-faire-l-amour-sans-contraception">
-        <meta property="og:image" content="https://www.exemple.com/images/og-image.jpg">
-        <meta property="og:site_name" content="Quand faire l'amour sans contraception">
-        <meta property="og:locale" content="fr_FR">
-        <!-- Twitter Card Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Quand faire l'amour à votre femme sans moyen de contraception - Calculateur de Périodes Sans Risque">
-        <meta name="twitter:description" content="Déterminez les périodes sans risque pour des rapports sans contraception.">
-        <meta name="twitter:image" content="https://www.exemple.com/images/twitter-image.jpg">
-    
-        <meta name="google-adsense-account" content="ca-pub-7270779498695617">
-    
-        <!-- Favicon -->
-        <link rel="icon" href="https://www.exemple.com/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quand faire l'amour à votre femme sans moyen de contraception - Calculateur de Périodes Sans Risque</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Calculateur pour déterminer les périodes où il est sans risque pour les hommes d'avoir des rapports sans contraception.">
+    <meta name="keywords" content="calculateur, périodes sans risque, contraception, rapport sécurisé, suivi cycle">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Natam">
+    <link rel="canonical" href="https://www.exemple.com/quand-faire-l-amour-sans-contraception">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
 <body>
     <header class="header">
         <h1 style="font-size: 28px; font-weight: bold;">Quand faire l'amour à votre femme sans moyen de contraception</h1>
     </header>
     <div style="text-align: center; padding: 20px;">
-    <p style=" margin: 0 auto;" class="text-p">
+        <p style="margin: 0 auto;" class="text-p">
             Conçu spécialement pour vous aider à déterminer les périodes où vous pouvez avoir des rapports sans risque de grossesse, sans utiliser de contraception. Suivez simplement les étapes pour connaître les jours où vous pouvez être tranquille.
         </p>
-</div>
+    </div>
     <div class="controls">
         <div class="bloc-cycle">
             <p class="text-p"> Le cycle se calcule entre les deux dernières règles. Demande à ta femme quand elle a eu ses dernières règles. Le nombre de jours entre ces deux dates correspond à la durée de son cycle. </p>
-            <label class="text-p" for="cycle-length">
-               Choisis cette durée moyenne ici :
-            </label>
-            <select  id="cycle-length" >
-                <!-- Options de 14 à 42 jours -->
+            <label class="text-p" for="cycle-length">Choisis cette durée moyenne ici :</label>
+            <select id="cycle-length">
                 <option value="14">14</option>
                 <option value="15">15</option>
                 <option value="16">16</option>
@@ -79,19 +58,29 @@
                 <option value="42">42</option>
             </select>
         </div>
-       
     </div>
 
     <div class="calendar-container">
         <div class="calendar-header">
             Quel a été le premier jour des dernières règles de votre compagne ?
         </div>
+        
+        <!-- Carousel pour les mois -->
+<div class="date-selector">
+    <button id="prev-month" class="carousel-button"></button>
+    <span id="month-label">Janvier 2024</span>
+    <button id="next-month" class="carousel-button"></button>
+</div>
+
+        
+        
+
         <div class="calendar" id="calendar">
             <!-- Les jours du calendrier seront générés ici -->
         </div>
         
     </div>
- <button id="calculate-btn" class="btn-calculer">Calculer</button>
+    <button id="calculate-button" class="btn-calculer">Calculer</button>
     <div class="legend">
         <div class="legend-item">
             <img src="./img/aubergine.jpg" alt="Périodes tranquilles" class="legend-icon" />
@@ -107,7 +96,6 @@
         </div>
     </div>
     
-
     <footer>
         <p>&copy; 2024 Natam. Tous droits réservés.</p>
     </footer>
